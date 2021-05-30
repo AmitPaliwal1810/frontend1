@@ -218,43 +218,49 @@ nav ul li a{
 
 
 /*Footer section*/
-footer{
-    background: var(--Dark-Blue);
-    padding: 40px;
-    
-}
-footer ul{
+footer ul {
     list-style-type: none;
 }
-footer .social{
-    display: flex;
-    margin-top: 30px;
 
+footer {
+    background: var(--Dark-Blue);
+    padding: 30px;
 }
-.container .content .footer-logo{
-    padding-top: 29px;
-    width: 15%;
-    height: 25%;
+
+footer ul.socials {
+    display: flex;
+    margin-top: 60px;
 }
-footer ul.social >*+*{
+
+footer ul.socials > * + * {
     margin-left: 14px;
 }
-footer .content{
-    display:flex;
+
+footer .content {
+    display: flex;
     justify-content: space-between;
 }
-footer .content a{
+
+footer .content a {
+    color: var(--Very-Light-Gray);
     text-decoration: none;
-    color: var(--White);
-    
+    transition: all .3s ease-in-out;
 }
-footer .content li{
+
+footer .content a:hover {
+    color: var(--Grayish-Blue);
+}
+
+footer .content li {
     margin-bottom: 10px;
 }
-footer .footer-cta{
+
+footer .footer-cta {
     text-align: right;
 }
-.copyright{
+
+footer .copyright {
     color: var(--Grayish-Blue);
-    margin-top: 20px;
+    font-size: 16px;
+    margin-top: 30px;
 }
