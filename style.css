@@ -264,3 +264,50 @@ footer .copyright {
     font-size: 16px;
     margin-top: 30px;
 }
+
+/*Responsive*/
+/*max width => desktop approach
+min width => mobile approach
+*/
+@media(max-width :870px){
+    .nav-links{
+        position:fixed;
+        top:80px;
+        /*
+        trick to center any div vartical posotion
+        left : 50%;
+        transform:translateX(-50%);
+        */
+        left:-500px;
+        transform:translateX(-50%);
+        background :var(--White);
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        border-radius: 20px;
+        padding: 20px 0px;
+        box-shadow: 0px 30px 50px 5px #A0A0A0;
+        /*this is for animation*/
+        transition: all .4s ease-in-out;
+    }
+    .nav-links.open{
+        left:50%;
+    }
+    .navbar-cta{
+        display: none;
+    }
+    .hamburger-btn{
+        border: none;
+        background:none;
+        outline: none;
+    }
+    .nav-links a{
+        color: var(--Dark-Blue);
+    }
+    .nav-links li{
+        padding-bottom: 7px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
