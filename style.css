@@ -380,6 +380,9 @@ large number media query should be on top
 }
 
 @media (max-width: 580px) {
+    html{
+        overflow-x: hidden;
+    }
     
     .card-wraper .card{
         flex: 1 0 100%;
