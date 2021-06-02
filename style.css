@@ -31,7 +31,15 @@ img{
 }
 nav{
     background-color:var(--White);
+   /*
     padding: 20px 0px;
+    
+    we comment in this padding just because in the mobile mode when we are tring to toggler the button for menu its change its size because burger image and crose image both have different height so its impacting on height 
+
+    solution is that we are going to use height except of padding
+    this is height will be fixed
+    */
+    height: 60px;
     display: flex;
     /*next line me ek property use ki hai jisse content jo hai vo door door hon jayega matlab image , ul , button*/
     justify-content: space-between;
@@ -265,11 +273,18 @@ footer .copyright {
     margin-top: 30px;
 }
 
+.hamburger-btn{
+    display: none;
+}
+
 /*Responsive*/
 /*max width => desktop approach
 min width => mobile approach
 */
 @media(max-width :870px){
+    .hamburger-btn{
+        display: block;
+    }
     .nav-links{
         position:fixed;
         top:80px;
@@ -309,5 +324,28 @@ min width => mobile approach
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    .header-text{
+        flex: 1 0 70%;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    .header-text p{
+        font-size: 16px;
+    }
+    .header-wrap{
+        padding-top: 30px;
+    }
+    .header-images{
+        flex: 1 0 30%;
+    }
+    .header-images img:first-child{
+        right: -50px;
+    }
+    .header-images img:last-child{
+        right: -72px;
+        top: -135px;
     }
 }

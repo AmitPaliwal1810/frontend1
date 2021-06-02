@@ -1,7 +1,7 @@
 const navLinks = document.querySelector(".nav-links");
 const hamburgerBtn = document.querySelector(".hamburger-btn");
 const toggleImg = document.querySelector('#toggle-img');
-
+/**/
 hamburgerBtn.addEventListener("click", () => {
   // this is for toggling the the open class if already add then it will remove it otherwise opposite
   navLinks.classList.toggle('open');
