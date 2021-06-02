@@ -8,7 +8,7 @@ hamburgerBtn.addEventListener("click", () => {
   // here it will give you the output true or false
   //contains is a class which gives you true or false
   isopen = navLinks.classList.contains("open");
-  if (isOpen) {
+  if (isopen) {
     toggleImg.src = "./img/icon-close.svg";
   } else {
     toggleImg.src = "./img/icon-hamburger.svg";
