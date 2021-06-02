@@ -191,7 +191,6 @@ nav ul li a {
 
 .article-card {
   background: var(--White);
-  border-radius: 10px;
 }
 
 .article-wraper .article-card img {
@@ -282,7 +281,7 @@ large number media query should be on top
 */
 
 @media (max-width: 1198px) {
-    .card-wraper{
+    .card-wraper , .article-wraper{
         flex-wrap: wrap;/*it is for when the card has no place to sit properly it will change into one by one*/
     }
     .card-wraper .card{
@@ -292,6 +291,12 @@ large number media query should be on top
         margin-left: 0px;
         margin-bottom: 30px;
     }
+    .article-wraper .article-card{
+        flex: 1 0 40%;
+    }
+    .article-wraper .article-card:nth-child(odd){
+        margin-left: 0px;
+    }  
 }
 
 @media (max-width: 870px) {
@@ -372,4 +377,23 @@ large number media query should be on top
     font-size: 16px;
     padding: 30px 0px;
   }
+}
+
+@media (max-width: 580px) {
+    
+    .card-wraper .card{
+        flex: 1 0 100%;
+        margin-left: 0!important;/*when some is more important to set any property use !important
+        
+        don't use it too much because it will give you overwriting problem
+        */
+    }
+    .article-wraper .article-card{
+        flex: 1 0 100%;
+        margin-left: 0px;
+    }
+
+    .article-wraper .article-card:last-child{
+        margin-bottom: 0px;
+    }
 }
