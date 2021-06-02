@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
   font-size: 18px;
+  overflow-x: hidden;
 }
 
 :root {
@@ -281,25 +282,48 @@ large number media query should be on top
 */
 
 @media (max-width: 1198px) {
-    .card-wraper , .article-wraper{
-        flex-wrap: wrap;/*it is for when the card has no place to sit properly it will change into one by one*/
-    }
-    .card-wraper .card{
-        flex: 1 0 40%;
-    }
-    .card-wraper .card:nth-child(odd){
-        margin-left: 0px;
-        margin-bottom: 30px;
-    }
-    .article-wraper .article-card{
-        flex: 1 0 40%;
-    }
-    .article-wraper .article-card:nth-child(odd){
-        margin-left: 0px;
-    }  
+  html {
+    overflow-x: hidden;
+  }
+  .card-wraper,
+  .article-wraper {
+    flex-wrap: wrap; /*it is for when the card has no place to sit properly it will change into one by one*/
+  }
+  .card-wraper .card {
+    flex: 1 0 40%;
+  }
+  .card-wraper .card:nth-child(odd) {
+    margin-left: 0px;
+    margin-bottom: 30px;
+  }
+  .article-wraper .article-card {
+    flex: 1 0 40%;
+  }
+  .article-wraper .article-card:nth-child(odd) {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 998px) {
+  footer .content {
+    flex-wrap: wrap;
+  }
+  footer .content > * {
+    flex: 1 0 30%;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+  footer ul .socials {
+    margin-top: 30px;
+  }
+  footer .footer-cta {
+    margin-bottom: 0px;
+  }
 }
 
 @media (max-width: 870px) {
+  html {
+    overflow-x: hidden;
+  }
   .hamburger-btn {
     display: block;
   }
@@ -379,24 +403,34 @@ large number media query should be on top
   }
 }
 
-@media (max-width: 580px) {
-    html{
-        overflow-x: hidden;
+@media(max-width:768px)
+{
+    footer .content > * {
+        flex:1 0 100%;
+        text-align: center;
     }
-    
-    .card-wraper .card{
-        flex: 1 0 100%;
-        margin-left: 0!important;/*when some is more important to set any property use !important
+    footer .socials{
+        justify-content: center;
+    }
+}
+@media (max-width: 580px) {
+  html {
+    overflow-x: hidden;
+  }
+
+  .card-wraper .card {
+    flex: 1 0 100%;
+    margin-left: 0 !important; /*when some is more important to set any property use !important
         
         don't use it too much because it will give you overwriting problem
         */
-    }
-    .article-wraper .article-card{
-        flex: 1 0 100%;
-        margin-left: 0px;
-    }
+  }
+  .article-wraper .article-card {
+    flex: 1 0 100%;
+    margin-left: 0px;
+  }
 
-    .article-wraper .article-card:last-child{
-        margin-bottom: 0px;
-    }
+  .article-wraper .article-card:last-child {
+    margin-bottom: 0px;
+  }
 }
